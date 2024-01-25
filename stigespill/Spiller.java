@@ -4,7 +4,7 @@
  * @author Mats Øinas
  */
 
-public class Spiller {
+public class Spiller {//test
     private String navn;
     private Brikke brikke = new Brikke();
     private Brett brett;
