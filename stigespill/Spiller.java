@@ -56,7 +56,7 @@ public class Spiller {//test
             if (consecutiveSixes == 3) {
                 setTrengerSekser(true);
                 brikke.setRute(brett.getRuter().get(0));
-                return 0;
+                return 18;
             }
         } while (roll == 6);
 
@@ -75,7 +75,7 @@ public class Spiller {//test
 
         int currentRuteIndex = brett.getRuter().indexOf(brikke.getRute());
 
-        if(currentRuteIndex + totalRoll < 100) {
+        if(currentRuteIndex + totalRoll <= 99) {
             int newRuteIndex = Math.min(currentRuteIndex + totalRoll, 100);
             newRuteIndex = brett.checkSquare(newRuteIndex);
             brikke.setRute(brett.getRuter().get(newRuteIndex));
@@ -86,8 +86,15 @@ public class Spiller {//test
         int totalRoll = rollDice(terning);
         System.out.println(navn + " triller: " + totalRoll);
 
-        movePlayer(totalRoll);
-        System.out.println(navn + " beveger seg til: " + brikke.getRute().getIndex());
+        if(consecutiveSixes == 3){
+            System.out.println(navn + " triller tre seksere og går tilbake til start");
+            setTrengerSekser(true);
+            brikke.setRute(brett.getRuter().get(0));
+            consecutiveSixes = 0;
+        } else {
+            movePlayer(totalRoll);
+            System.out.println(navn + " beveger seg til rute " + brikke.getRute().getIndex());
+        }
     }
 
     public boolean harVunnet(){

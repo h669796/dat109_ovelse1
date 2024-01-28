@@ -4,24 +4,19 @@
  */
 
 public class Rute {
-    private String navn;
     private int index;
 
 
     /**
      * Oppretter en ny rute
      *
-     * @param navn
+     * @param index er tallet på ruten
      */
 
-    public Rute(String navn, int index){
+    public Rute(int index){
         this.index = index;
-        this.navn = navn;
     }
 
-    public String getNavn(){
-        return navn;
-    }
     public int getIndex(){
         return index;
     }

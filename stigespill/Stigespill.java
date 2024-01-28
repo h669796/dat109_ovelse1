@@ -15,11 +15,15 @@ public class Stigespill {
      * @param antallSpillere
      */
     public Stigespill(final Integer antallSpillere){
-        for(int i = 0; i < antallSpillere; i++){
+        for(int i = 0; i <= antallSpillere; i++){
             spillere.add(new Spiller("Spiller " + i, brett));
         }
     }
 
+    /**
+     * Starter spillet, og bruker en flag variabel til å avslutte det
+     *
+     */
     public void spill(){
         boolean spillSlutt = false;
 

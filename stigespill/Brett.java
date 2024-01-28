@@ -17,12 +17,12 @@ public class Brett {
 
     /**
      * Oppretter brettet via konstruktør
+     * Hver rute får et navn, og en indeks
      */
 
 public Brett(){
     for(int i = 0; i < 100; i++){
-
-        ruter.add(new Rute("Rute " + i, i));
+        ruter.add(new Rute(i));
     }
     settSlangerOgStiger();
 }
@@ -57,13 +57,13 @@ private void settSlangerOgStiger(){
     ladders.put(60, 79);
     ladders.put(70, 88);
 
-    snakes.put(17, 7);  // Snake from square 17 to 7
+    snakes.put(17, 7);
     snakes.put(90, 76);
-    snakes.put(66, 49);  // Snake from square 17 to 7
+    snakes.put(66, 49);
     snakes.put(16, 2);
-    snakes.put(75, 51);  // Snake from square 17 to 7
+    snakes.put(75, 51);
     snakes.put(33, 18);
-    snakes.put(27, 13);  // Snake from square 17 to 7
+    snakes.put(27, 13);
     snakes.put(46, 32);
 }
 
