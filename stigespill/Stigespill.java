@@ -20,12 +20,21 @@ public class Stigespill {
         }
     }
 
-//    public void spill(){
-//        for(int runde = 0; runde < 20; runde++){
-//            for(Spiller spiller : spillere){
-//                spiller.spillTrekk(Terning);
-//            }
-//        }
-//    }
+    public void spill(){
+        boolean spillSlutt = false;
+
+    while(!spillSlutt)
+        for(Spiller spiller : spillere){
+            spiller.spillTrekk(terning);
+
+            if(spiller.harVunnet()){
+                System.out.println(spiller.getNavn() + " har vunnet stigespillet!");
+                spillSlutt = true;
+                break;
+            }
+        }
+    }
+
+
 
 }

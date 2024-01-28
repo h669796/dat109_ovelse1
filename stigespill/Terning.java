@@ -24,6 +24,6 @@ public class Terning {
      * Triller terningen
      */
     public void trill(){
-        verdi = new Random().nextInt(6);
+        verdi = new Random().nextInt(6) + 1;
     }
 }

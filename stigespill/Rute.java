@@ -5,6 +5,7 @@
 
 public class Rute {
     private String navn;
+    private int index;
 
 
     /**
@@ -13,12 +14,16 @@ public class Rute {
      * @param navn
      */
 
-    public Rute(String navn){
+    public Rute(String navn, int index){
+        this.index = index;
         this.navn = navn;
     }
 
     public String getNavn(){
         return navn;
+    }
+    public int getIndex(){
+        return index;
     }
 
     /**
@@ -26,7 +31,5 @@ public class Rute {
      *
      * @param sum hvor langt en brikke skal flyttes
      */
-    public void flytt(Integer sum){
 
-    }
 }
