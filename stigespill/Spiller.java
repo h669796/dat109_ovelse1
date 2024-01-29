@@ -63,9 +63,10 @@ public class Spiller {//test
         return totalRoll;
     }
 
-    public void movePlayer(int totalRoll) {
-        if (trengerSekser()) {
-            if (totalRoll == 6) {
+    public void movePlayer(int totalRoll){
+
+        if(trengerSekser()){
+            if(totalRoll == 6){
                 setTrengerSekser(false);
                 brikke.setRute(brett.getRuter().get(6));
             }
@@ -73,15 +74,12 @@ public class Spiller {//test
         }
 
         int currentRuteIndex = brett.getRuter().indexOf(brikke.getRute());
-        System.out.println("Current Position: " + currentRuteIndex + ", Roll: " + totalRoll);
 
-        int newRuteIndex = currentRuteIndex + totalRoll;
-
-        // Check if there are ladders or snakes at the new position
-        newRuteIndex = brett.checkSquare(newRuteIndex);
-        System.out.println("New Position After checkSquare: " + newRuteIndex);
-
-        brikke.setRute(brett.getRuter().get(newRuteIndex));
+        if(currentRuteIndex + totalRoll <= 99) {
+            int newRuteIndex = Math.min(currentRuteIndex + totalRoll, 100);
+            newRuteIndex = brett.checkSquare(newRuteIndex);
+            brikke.setRute(brett.getRuter().get(newRuteIndex));
+        }
     }
 
     public void spillTrekk(Terning terning){
