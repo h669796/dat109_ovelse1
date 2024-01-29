@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -40,5 +39,12 @@ public class Stigespill {
     }
 
 
+    public int getAntallSpillere() {
+        return spillere.size();
+    }
+
+    public ArrayList<Spiller> getSpillere() {
+        return spillere;
+    }
 
 }

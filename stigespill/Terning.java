@@ -12,7 +12,7 @@ public class Terning {
     /**
      * Oppretter en ny terning
      */
-    public Terning(){
+    public Terning() {
         random = new Random();
         trill();
     }
@@ -20,10 +20,18 @@ public class Terning {
     public Integer getVerdi() {
         return verdi;
     }
+
     /**
      * Triller terningen
      */
-    public void trill(){
+    public void trill() {
         verdi = new Random().nextInt(6) + 1;
     }
+
+
+    public void setVerdi(int verdi) {
+        this.verdi = verdi;
+    }
 }
+
+

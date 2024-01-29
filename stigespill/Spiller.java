@@ -5,7 +5,7 @@
  */
 public class Spiller {//test
     private String navn;
-    private Brikke brikke = new Brikke();
+    Brikke brikke = new Brikke();
     private Brett brett;
     private int consecutiveSixes;
     private boolean trengerSekser;
