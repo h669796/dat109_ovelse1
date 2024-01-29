@@ -8,7 +8,7 @@ public class BrettTest {
 
     private Brett brett;
 
-    @Before
+    @BeforeEach
     public void setUp(){
         brett = new Brett();
     }
@@ -30,8 +30,9 @@ public class BrettTest {
     @Test
     public void testRuteMedStige(){
         int rutenr = 3;
+        int forventetResultat = 22;
         int resultat = brett.checkSquare(rutenr);
-        assertEquals(rutenr, resultat);
+        assertEquals(forventetResultat, resultat);
     }
 
     @Test

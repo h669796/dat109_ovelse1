@@ -28,7 +28,6 @@ public class Terning {
         verdi = new Random().nextInt(6) + 1;
     }
 
-
     public void setVerdi(int verdi) {
         this.verdi = verdi;
     }

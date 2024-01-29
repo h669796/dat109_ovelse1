@@ -66,6 +66,4 @@ private void settSlangerOgStiger(){
     snakes.put(27, 13);
     snakes.put(46, 32);
 }
-
-
 }
