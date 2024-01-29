@@ -1,4 +1,5 @@
 import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,7 +31,7 @@ public class BrettTest {
     public void testRuteMedStige(){
         int rutenr = 3;
         int resultat = brett.checkSquare(rutenr);
-        assertEquals(rutenr, resultat;
+        assertEquals(rutenr, resultat);
     }
 
     @Test
@@ -40,14 +41,6 @@ public class BrettTest {
         int resultat = brett.checkSquare(squarenr);
         assertEquals(ankommetrute, resultat);
     }
-
-
-
-
-
-
-
-
 
 
 
