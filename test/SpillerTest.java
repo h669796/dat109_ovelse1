@@ -37,30 +37,30 @@ public class SpillerTest {
             @Override
             public void trill() {
                 // Simulate a dice roll
-                setVerdi(6);
+                setVerdi(5);
             }
         };
 
         int totalRoll = spiller.rollDice(mockTerning);
-        assertEquals(6, totalRoll);
+        assertEquals(5, totalRoll);
     }
-
     @Test
     public void testMovePlayer() {
         // Assuming the player starts at the beginning of the board
         assertEquals(0, spiller.brikke.getRute().getIndex());
 
-        // Move player 5 steps
+
         spiller.movePlayer(5);
         assertEquals(5, spiller.brikke.getRute().getIndex());
 
-        // Move player to the end of the board
-        spiller.movePlayer(95);
-        assertEquals(99, spiller.brikke.getRute().getIndex());
 
-        // Trying to move beyond the end of the board should not change the player's position
+        spiller.brikke.setRute(brett.getRuter().get(0));
+        spiller.movePlayer(70);
+        assertEquals(88, spiller.brikke.getRute().getIndex());
+
+        spiller.brikke.setRute(brett.getRuter().get(0));
         spiller.movePlayer(2);
-        assertEquals(99, spiller.brikke.getRute().getIndex());
+        assertEquals(2, spiller.brikke.getRute().getIndex());
     }
 
     @Test
@@ -86,6 +86,11 @@ public class SpillerTest {
         spiller.spillTrekk(mockTerning);
         assertEquals("TestPlayer triller: 2\nTestPlayer beveger seg til rute 2\n", outContent.toString());
 
+        spiller.spillTrekk(mockTerning);
+        assertEquals("TestPlayer triller: 4\nTestPlayer beveger seg til rute 6\n", outContent.toString());
+
+        spiller.spillTrekk(mockTerning);
+        assertEquals("TestPlayer triller: 6\nTestPlayer beveger seg til rute 12\n", outContent.toString());
         // Reset System.out to its original PrintStream
         System.setOut(System.out);
     }

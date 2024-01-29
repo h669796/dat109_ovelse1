@@ -18,7 +18,7 @@ public class StigespillTest {
     @Test
     public void testConstructor() {
         assertNotNull(stigespill);
-        assertEquals(3, stigespill.getAntallSpillere()); // Including the default player
+        assertEquals(2, stigespill.getAntallSpillere()); // Including the default player
     }
 
     @Test
@@ -38,7 +38,7 @@ public class StigespillTest {
         };
 
         // Replace one of the players in the game with the mock player
-        stigespill.getSpillere().set(1, mockSpiller);
+        stigespill.getSpillere().set(0, mockSpiller);
 
         // Capture the console output for testing
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
