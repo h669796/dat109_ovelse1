@@ -13,6 +13,6 @@ public class TerningTest {
 
     @Test
     void TestInitialValue() {
-        assertTrue(terning.getVerdi() >= 1 && verdi <= 6, "Verdien etter trillet terning må vere 1 og 6");
+        assertTrue(terning.getVerdi() >= 1 && terning.getVerdi() <= 6, "Verdien etter trillet terning må vere 1 og 6");
     }
 }
