@@ -1,5 +1,7 @@
-import javax.annotation.processing.SupportedAnnotationTypes;
-import static org.junit.Assert.assertEquals;
+import org.junit.Before;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BrettTest {
 
@@ -38,6 +40,8 @@ public class BrettTest {
         int resultat = brett.checkSquare(squarenr);
         assertEquals(ankommetrute, resultat);
     }
+
+
 
 
 
